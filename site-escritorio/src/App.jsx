@@ -1,19 +1,3 @@
-// import Button from '@mui/material/Button';
-
-// function App() {
-//   return(
-//     <div>
-//       <h1>Site Escritório de Engenharia</h1>
-//       <Button variant='contained'>Hello World !</Button>
-//     </div>
-
-//   );
-// }
-
-// export default App;
-
-
-
 import * as React from 'react';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Typography from '@mui/material/Typography';
@@ -29,34 +13,25 @@ function handleClick(event) {
 export default function CustomSeparator() {
   const breadcrumbs = [
     <Link underline="hover" key="1" color="inherit" href="/" onClick={handleClick}>
-      MUI
+      Home
     </Link>,
-    <Link
-      underline="hover"
-      key="2"
-      color="inherit"
-      href="/getting-started/installation/"
-      onClick={handleClick}
-    >
-      Core
+    <Link underline="hover" key="2" color="inherit" href="/getting-started/installation/" onClick={handleClick}>
+      Sobre
     </Link>,
-    <Typography key="3" color="text.primary">
-      Breadcrumb
-    </Typography>,
+    <Link underline="hover" key="2" color="inherit" href="/getting-started/installation/" onClick={handleClick}>
+      Destaques
+    </Link>,
+    <Link underline='hover' key="3" color="text.primary" href='/' onClick={handleClick}>
+      Projetos
+    </Link>,
+    <Link underline='hover' key="3" color="text.primary" href='/' onClick={handleClick}>
+      Membros
+    </Link>
   ];
 
   return (
     <Stack spacing={2}>
       <Breadcrumbs separator="|" aria-label="breadcrumb">
-        {breadcrumbs}
-      </Breadcrumbs>
-      <Breadcrumbs separator="|" aria-label="breadcrumb">
-        {breadcrumbs}
-      </Breadcrumbs>
-      <Breadcrumbs
-        separator={<NavigateNextIcon fontSize="small" />}
-        aria-label="breadcrumb"
-      >
         {breadcrumbs}
       </Breadcrumbs>
     </Stack>
