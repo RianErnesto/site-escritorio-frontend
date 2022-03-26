@@ -1,15 +1,13 @@
-import React from 'react';
-import HomeHeader from './Components/HomeHeader.jsx';
-import Example from './Components/HomeCarousel.jsx';
-import Teste from './Components/Teste.jsx';
+import React from "react";
+import HomeHeader from "./Components/HomeHeader.jsx";
+import HomeCarousel from "./Components/HomeCarousel.jsx";
 
 function App() {
   return (
     <div>
       <HomeHeader />
-      <Example />
+      <HomeCarousel />
     </div>
-    // <Teste />
   );
 }
 
