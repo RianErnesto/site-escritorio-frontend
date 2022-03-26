@@ -1,9 +1,9 @@
 import React from 'react';
-import HomeAppBar from './Header';
+import HomeHeader from './Components/HomeHeader.jsx';
 
 function App() {
   return (
-    <HomeAppBar />
+    <HomeHeader />
   );
 }
 
