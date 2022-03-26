@@ -1,9 +1,15 @@
 import React from 'react';
 import HomeHeader from './Components/HomeHeader.jsx';
+import Example from './Components/HomeCarousel.jsx';
+import Teste from './Components/Teste.jsx';
 
 function App() {
   return (
-    <HomeHeader />
+    <div>
+      <HomeHeader />
+      <Example />
+    </div>
+    // <Teste />
   );
 }
 
