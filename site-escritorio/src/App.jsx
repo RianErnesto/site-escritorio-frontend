@@ -4,7 +4,7 @@ import HomeCarousel from "./Components/HomeCarousel.jsx";
 
 function App() {
   return (
-    <div>
+    <div style={{ backgroundImage: `url(../BackgroundImage.png)` }}>
       <HomeHeader />
       <HomeCarousel />
     </div>
