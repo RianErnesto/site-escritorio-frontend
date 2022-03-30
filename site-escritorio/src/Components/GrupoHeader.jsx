@@ -37,10 +37,10 @@ function GruposHeader() {
                             pr: { md: 0 },
                         }}
                     >
-                        <Typography component="h1" variant="h3" color="inherit" gutterBottom>
+                        <Typography component="h1" variant="h3" color="inherit" gutterBottom sx={{borderBottom: '2px solid #00B9E1', paddingBottom: '10px'}}>
                             Grupos
                         </Typography>
-                        <Typography variant="h5" color="inherit" paragraph>
+                        <Typography variant="h6" color="inherit" paragraph>
                             Equipes de atuação para a divisão de projetos
                         </Typography>
                     </Box>

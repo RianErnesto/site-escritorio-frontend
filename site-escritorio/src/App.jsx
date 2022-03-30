@@ -2,8 +2,8 @@ import React from "react";
 import HomeHeader from "./Components/HomeHeader.jsx";
 import HomeCarousel from "./Components/HomeCarousel.jsx";
 import GruposHeader from "./Components/GrupoHeader.jsx";
-import GrupoList from "./Components/GrupoLists.jsx";
-import Grid from '@mui/material/Grid';
+// import GrupoList from "./Components/GrupoLists.jsx";
+import GrupoListBox from './Components/GrupoListBox.jsx';
 
 function App() {
   return (
@@ -14,10 +14,11 @@ function App() {
       </div>
       <div style={{backgroundColor: 'transparent', width: '80%', margin: 'auto'}}>
         <GruposHeader />
-        <Grid container spacing={10} sx={{paddingBottom: '100px'}}>
+        <GrupoListBox />
+        {/* <Grid container spacing={10} sx={{paddingBottom: '100px'}}>
           <GrupoList />
           <GrupoList />
-        </Grid>
+        </Grid> */}
       </div>
     </div>
   );
