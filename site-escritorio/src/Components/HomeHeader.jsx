@@ -11,6 +11,7 @@ import MenuItem from "@mui/material/MenuItem";
 import HomeNavBar from "./HomeNavBar";
 
 const pages = ["Home", "Sobre", "Destaques", "Projetos", "Membros"];
+const logo = "/src/Images/Logo.png";
 
 const HomeHeader = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -31,7 +32,7 @@ const HomeHeader = () => {
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{ justifyContent: "space-around" }}>
           <IconButton sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
-            <img src="../Logo.png" height={50}></img>
+            <img src={logo} height={50}></img>
           </IconButton>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -40,9 +41,9 @@ const HomeHeader = () => {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              sx={{color: 'white', backgroundColor: '#2B2B2B'}}
+              sx={{ color: "white", backgroundColor: "#2B2B2B" }}
             >
-              <MenuIcon/>
+              <MenuIcon />
             </IconButton>
             <Menu
               id="menu-appbar"

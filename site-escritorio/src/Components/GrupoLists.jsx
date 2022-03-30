@@ -20,12 +20,16 @@ function GrupoLists(props) {
             display: "flex",
             backgroundColor: "transparent",
             boxShadow: "none",
-            flexDirection: {xs: "column", sm: "row"}
+            flexDirection: { xs: "column", sm: "row" },
           }}
         >
           <CardMedia
             component="img"
-            sx={{ width: 160, display: { xs: "block", sm: "block" }, margin: {xs: 'auto'} }}
+            sx={{
+              width: 160,
+              display: { xs: "block", sm: "block" },
+              margin: { xs: "auto" },
+            }}
             image={props.item.url}
             alt={props.item.title}
           />
