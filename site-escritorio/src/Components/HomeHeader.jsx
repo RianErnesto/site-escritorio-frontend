@@ -73,7 +73,7 @@ const HomeHeader = () => {
           <IconButton
             sx={{ flexGrow: 100, display: { xs: "flex", md: "none" } }}
           >
-            <img src="../Logo.png" height={50}></img>
+            <img src={logo} height={50}></img>
           </IconButton>
           <HomeNavBar item={pages} />
         </Toolbar>
