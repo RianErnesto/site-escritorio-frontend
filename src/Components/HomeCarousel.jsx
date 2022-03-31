@@ -83,9 +83,8 @@ function HomeCarousel() {
 
   return (
     <Carousel
-    customRightArrow={
-      <div>Teste</div>
-    }
+      // customRightArrow
+      // customLeftArrow
       additionalTransfrom={0}
       autoPlaySpeed={8000}
       centerMode={false}
