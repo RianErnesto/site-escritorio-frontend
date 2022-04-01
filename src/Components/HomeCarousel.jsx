@@ -1,50 +1,8 @@
 import React from "react";
-// import Carousel from "react-material-ui-carousel";
 import HomeCarouselContent from "./HomeCarouselContent.jsx";
 import Carousel from "react-multi-carousel";
 import { Button } from "@mui/material";
 import "react-multi-carousel/lib/styles.css";
-
-// function HomeCarousel() {
-// var items = [
-//   {
-//     title: "Bem vindo ao Escritório de Engenharia",
-//     description:
-//       "Grupo de engenharia voltado para o desenvolvimento de projetos do Cesupa",
-//     button: "Saber Mais...",
-//   },
-//   {
-//     title: "Sobre nós",
-//     description:
-//       "Nós somos o Escritório de Engenharia, fazemos projetos e criamos discussões relacionadas a área da tecnologia aliada a engenharia",
-//     button: "Veja Mais...",
-//   },
-// ];
-
-//   return (
-//     <Carousel
-//       interval={8000}
-//       navButtonsAlwaysVisible="true"
-//       navButtonsProps={{
-//         style: {
-//           backgroundColor: "red",
-//           color: "white"
-//         },
-//       }}
-//       navButtonsWrapperProps={{
-//         style: {
-//           backgroundColor: 'black'
-//         }
-//       }}
-//       indicators={false}
-//       sx={{ minHeight: '500px' }}
-//     >
-// {items.map((item, i) => (
-//   <HomeCarouselContent key={i} item={item} />
-// ))}
-//     </Carousel>
-//   );
-// }
 
 const CustomRightArrow = ({ onClick, ...rest }) => {
   const {

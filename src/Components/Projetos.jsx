@@ -4,6 +4,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { Breadcrumbs } from "@mui/material";
 import { Stack } from "@mui/material";
+import Button from "@mui/material/Button";
 
 function Projetos() {
   return (
@@ -29,18 +30,29 @@ function Projetos() {
         />
       }
       <Box
-        sx={{ display: { xs: "none", md: "flex" }, justifyContent: "center" }}
+        sx={{
+          flexDirection: { xs: "column", md: "row" },
+          display: 'flex',
+          justifyContent: "center",
+          alignItems: 'center'
+        }}
       >
-        <Stack spacing={2}>
-          <Breadcrumbs separator="|" aria-label="breadcrumb" color="white">
-            <Typography variant="h4" gutterBottom component="div">
-              O que nós fazemos?
-            </Typography>
-            <Typography variant="h6" gutterBottom component="div">
-              Pesquisas, protótipos e desenvolvimento de projetos voltados as
-              áreas das engenharias
-            </Typography>
-          </Breadcrumbs>
+        <Typography variant="h4" gutterBottom component="div">
+          O que nós fazemos?
+        </Typography>
+        <Box sx={{height: {md: '40px', xs: '0'}, width: {md: '0', xs: '80px'}, marginLeft: '20px', marginRight: '20px', border: '1px solid white'}}></Box>
+        <Typography
+          variant="h6"
+          gutterBottom
+          component="div"
+          textAlign="center"
+          sx={{ width: { md:"40%", xs: '100%' }, paddingTop: {md: '0', xs: '20px'}}}
+        >
+          Pesquisas, protótipos e desenvolvimento de projetos voltados as áreas
+          das engenharias
+        </Typography>
+        <Stack spacing={2} pt={1} ml={{md: '20px', xs: '0'}}>
+          <Button variant="contained">Ver Projetos</Button>
         </Stack>
       </Box>
     </Paper>
