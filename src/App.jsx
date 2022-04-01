@@ -3,16 +3,15 @@ import HomeHeader from "./Components/HomeHeader.jsx";
 import HomeCarousel from "./Components/HomeCarousel.jsx";
 import GruposHeader from "./Components/GrupoHeader.jsx";
 import GrupoListBox from "./Components/GrupoListBox.jsx";
-import Projetos from './Components/Projetos.jsx'
-import ReactDOM from 'react-dom';
+import Projetos from "./Components/Projetos.jsx";
+import ReactDOM from "react-dom";
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
-)
-
+  document.getElementById("root")
+);
 
 function App() {
   return (
