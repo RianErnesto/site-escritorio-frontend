@@ -18,9 +18,9 @@ const HomeNavBar = (props) => {
               underline="hover"
               key="1"
               color="white"
-              href="/"
+              href={`#${page}`}
               onClick={handleClick}
-              style={{ marginLeft: 20, marginRight: 20 }}
+            style={{ marginLeft: 20, marginRight: 20, filter: "drop-shadow(0 4px 10px black)" }}
             >
               {page}
             </Link>

@@ -27,12 +27,12 @@ const HomeHeader = () => {
     <AppBar
       position="static"
       color="transparent"
-      sx={{ paddingTop: "30px", paddingBottom: "30px", boxShadow: "none" }}
+      sx={{ paddingTop: "0px", paddingBottom: "30px", boxShadow: "none" }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{ justifyContent: "space-around" }}>
           <IconButton sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
-            <img src={logo} height={50}></img>
+            <img src={logo} height={120}></img>
           </IconButton>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -73,7 +73,7 @@ const HomeHeader = () => {
           <IconButton
             sx={{ flexGrow: 100, display: { xs: "flex", md: "none" } }}
           >
-            <img src={logo} height={50}></img>
+            <img src={logo} height={120}></img>
           </IconButton>
           <HomeNavBar item={pages} />
         </Toolbar>
