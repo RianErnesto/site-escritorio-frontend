@@ -1,7 +1,8 @@
 import React from "react";
 import HomeCarouselContent from "./HomeCarouselContent.jsx";
 import Carousel from "react-multi-carousel";
-import { Button } from "@mui/material";
+import Button from "@mui/material/Button";
+import '../Styles/Carousel.css';
 import "react-multi-carousel/lib/styles.css";
 
 const CustomRightArrow = ({ onClick, ...rest }) => {
