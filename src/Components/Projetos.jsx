@@ -52,7 +52,7 @@ function Projetos() {
           das engenharias
         </Typography>
         <Stack spacing={2} pt={1} ml={{md: '20px', xs: '0'}}>
-          <Button variant="contained">Ver Projetos</Button>
+          <Button variant="contained" sx={{backgroundColor: '#00B9E1', borderRadius: '20px 20px 20px 20px'}}>Ver Projetos</Button>
         </Stack>
       </Box>
     </Paper>

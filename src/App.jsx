@@ -4,7 +4,9 @@ import HomeCarousel from "./Components/HomeCarousel.jsx";
 import GruposHeader from "./Components/GrupoHeader.jsx";
 import GrupoListBox from "./Components/GrupoListBox.jsx";
 import Projetos from "./Components/Projetos.jsx";
+import Sobre from "./Components/Sobre.jsx";
 import ReactDOM from "react-dom";
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -32,6 +34,7 @@ function App() {
         <GrupoListBox />
       </div>
       <Projetos />
+      <Sobre ></Sobre>
     </div>
   );
 }
