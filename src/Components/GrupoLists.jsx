@@ -65,7 +65,7 @@ function GrupoLists(props) {
                   ":hover": {
                     backgroundColor: "#1A1A1A",
                     color: "white",
-                    border: 0,
+                    border: "1px solid black",
                     boxShadow: "2px 3px 0px #222",
                   },
                 }}
