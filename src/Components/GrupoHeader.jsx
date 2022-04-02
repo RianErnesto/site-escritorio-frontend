@@ -11,7 +11,6 @@ function GruposHeader() {
         position: "relative",
         backgroundColor: "transparent",
         color: "#fff",
-        mb: 4,
         boxShadow: 0
       }}
     >

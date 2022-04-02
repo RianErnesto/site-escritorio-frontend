@@ -121,9 +121,20 @@ function MembrosCarousel() {
   ];
 
   return (
-    <Box>
+    <Box pb="70px">
+      {/* <Button
+        sx={{ backgroundColor: "red" }}
+        onClick={() => {
+          const nextSlide = this.Carousel.state.currentSlide + 1;
+        }}
+      ></Button> */}
       <Carousel
-      transitionDuration={1000}
+        ref={el => (
+            // this.Carousel = el
+            console.log(Carousel)
+            // console.log(el)
+        )}
+        transitionDuration={1000}
         additionalTransfrom={0}
         autoPlaySpeed={8000}
         centerMode={false}
@@ -149,7 +160,7 @@ function MembrosCarousel() {
           },
           mobile: {
             breakpoint: {
-              max: 464,
+              max: 700,
               min: 0,
             },
             items: 1,
@@ -158,7 +169,7 @@ function MembrosCarousel() {
           tablet: {
             breakpoint: {
               max: 1024,
-              min: 464,
+              min: 700,
             },
             items: 2,
             partialVisibilityGutter: 30,

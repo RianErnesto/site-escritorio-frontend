@@ -10,7 +10,7 @@ function Membros() {
     <Box sx={{ width: "100%", pt: "50px" }}>
       <MembrosHeader />
       <MembrosCarousel />
-      <Stack sx={{ pt: 4 }} direction="row" spacing={2} justifyContent="center">
+      <Stack sx={{ pt: 4, pb: 12 }} direction="row" spacing={2} justifyContent="center">
         <Button
           variant="contained"
           sx={{
