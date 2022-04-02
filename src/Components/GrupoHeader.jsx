@@ -12,10 +12,7 @@ function GruposHeader() {
         backgroundColor: "transparent",
         color: "#fff",
         mb: 4,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        boxShadow: 0,
+        boxShadow: 0
       }}
     >
       <Box
@@ -28,7 +25,7 @@ function GruposHeader() {
           backgroundColor: "transparent",
         }}
       />
-      <Grid container>
+      <Grid container display="flex" sx={{justifyContent: {sm: 'left', xs: 'center'}, textAlign: {xs: 'center', sm: 'left'}}}>
         <Grid item md={6}>
           <Box
             sx={{
@@ -47,7 +44,7 @@ function GruposHeader() {
             >
               Grupos
             </Typography>
-            <Box sx={{border: '1px solid #00B9E1', mb: '20px', width: '35%'}}></Box>
+            <Box sx={{border: '1px solid #00B9E1', mb: '20px', width: '35%', ml: {xs: 'auto', sm: 0}, mr: {xs: 'auto', sm: 0}}}></Box>
             <Typography variant="h6" color="inherit" paragraph>
               Equipes de atuação para a divisão de projetos
             </Typography>

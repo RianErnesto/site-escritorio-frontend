@@ -1,12 +1,10 @@
 import React from "react";
-import HomeHeader from "./Components/HomeHeader.jsx";
-import HomeCarousel from "./Components/HomeCarousel.jsx";
-import GruposHeader from "./Components/GrupoHeader.jsx";
-import GrupoListBox from "./Components/GrupoListBox.jsx";
-import Projetos from "./Components/Projetos.jsx";
-import Sobre from "./Components/Sobre.jsx";
+import Home from "./Components/Home";
+import Grupo from "./Components/Grupo";
+import Projetos from "./Components/Projetos";
+import Sobre from "./Components/Sobre";
+import Membros from "./Components/Membros";
 import ReactDOM from "react-dom";
-
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,23 +16,11 @@ ReactDOM.render(
 function App() {
   return (
     <div>
-      <div
-        style={{
-          backgroundImage: "url(/src/Images/BackgroundImage.png)",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <HomeHeader />
-        <HomeCarousel />
-      </div>
-      <div
-        style={{ backgroundColor: "transparent", width: "80%", margin: "auto" }}
-      >
-        <GruposHeader />
-        <GrupoListBox />
-      </div>
+      <Home />
+      <Grupo />
       <Projetos />
-      <Sobre ></Sobre>
+      <Sobre />
+      <Membros />
     </div>
   );
 }

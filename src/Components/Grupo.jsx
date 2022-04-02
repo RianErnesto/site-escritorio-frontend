@@ -1,6 +1,7 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 import GrupoLists from "./GrupoLists";
+import GrupoHeader from "./GrupoHeader";
 
 var groups = [
   {
@@ -23,14 +24,19 @@ var groups = [
   },
 ];
 
-function GrupoListBox() {
+function Grupo() {
   return (
-    <Grid container spacing={10} sx={{ paddingBottom: "100px" }}>
-      {groups.map((group, i) => (
-        <GrupoLists key={i} item={group} />
-      ))}
-    </Grid>
+    <div
+      style={{ backgroundColor: "transparent", width: "80%", margin: "auto" }}
+    >
+      <GrupoHeader />
+      <Grid container spacing={10} sx={{ paddingBottom: "100px" }}>
+        {groups.map((group, i) => (
+          <GrupoLists key={i} item={group} />
+        ))}
+      </Grid>
+    </div>
   );
 }
 
-export default GrupoListBox;
+export default Grupo;

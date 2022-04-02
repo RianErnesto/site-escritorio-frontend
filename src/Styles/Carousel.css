@@ -9,3 +9,8 @@
 .arrowImage:hover {
     filter: opacity(100%);
 }
+
+.carouselMembros {
+    width: 80%;
+    margin: auto;
+}
