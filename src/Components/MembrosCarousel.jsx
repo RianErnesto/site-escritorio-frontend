@@ -1,15 +1,8 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import Button from "@mui/material/Button";
-import { Box, Stack } from "@mui/material";
+import { Box } from "@mui/material";
 import MembrosCarouselContent from "./MembrosCarouselContent";
-import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
-import Card from "@mui/material/Card";
-import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
-import CardActions from "@mui/material/CardActions";
 import "../Styles/Carousel.css";
 import "react-multi-carousel/lib/styles.css";
 
@@ -129,10 +122,9 @@ function MembrosCarousel() {
         }}
       ></Button> */}
       <Carousel
-        ref={el => (
+        ref={(el) => (
             // this.Carousel = el
-            console.log(Carousel)
-            // console.log(el)
+            console.log(el)
         )}
         transitionDuration={1000}
         additionalTransfrom={0}

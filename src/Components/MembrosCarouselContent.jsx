@@ -1,12 +1,8 @@
 import React from "react";
-import Grid from "@mui/material/Grid";
-import Card from "@mui/material/Card";
-import { CardMedia } from "@mui/material";
 import { CardContent } from "@mui/material";
 import { Typography } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
-import PageviewIcon from "@mui/icons-material/Pageview";
 
 function MembrosCarouselContent(props) {
   return (
@@ -17,6 +13,7 @@ function MembrosCarouselContent(props) {
         textAlign: "center",
         marginLeft: "40px",
         marginRight: "40px",
+        color: 'white'
       }}
     >
       <Box

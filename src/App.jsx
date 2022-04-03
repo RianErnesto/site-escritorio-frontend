@@ -4,6 +4,7 @@ import Grupo from "./Components/Grupo";
 import Projetos from "./Components/Projetos";
 import Sobre from "./Components/Sobre";
 import Membros from "./Components/Membros";
+import Destaques from "./Components/Destaques";
 import ReactDOM from "react-dom";
 
 ReactDOM.render(
@@ -21,6 +22,7 @@ function App() {
       <Projetos />
       <Sobre />
       <Membros />
+      <Destaques />
     </div>
   );
 }
