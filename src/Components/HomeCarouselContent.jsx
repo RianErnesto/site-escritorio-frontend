@@ -34,7 +34,7 @@ function HomeCarouselContent(props) {
           spacing={2}
           justifyContent="center"
         >
-          <Button variant="contained" sx={{backgroundColor: '#00B9E1', borderRadius: '20px 20px 20px 20px'}}>{props.item.button}</Button>
+          <Button href={props.item.ref} variant="contained" sx={{backgroundColor: '#00B9E1', borderRadius: '20px 20px 20px 20px'}}>{props.item.button}</Button>
         </Stack>
       </Container>
     </Box>

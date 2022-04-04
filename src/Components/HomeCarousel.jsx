@@ -66,12 +66,14 @@ function HomeCarousel() {
       description:
         "Grupo de engenharia voltado para o desenvolvimento de projetos do Cesupa",
       button: "Saber Mais...",
+      ref: 'https://cesupa.br'
     },
     {
       title: "Sobre nós",
       description:
         "Nós somos o Escritório de Engenharia, fazemos projetos e criamos discussões relacionadas a área da tecnologia aliada a engenharia",
       button: "Veja Mais...",
+      ref: '#Sobre'
     },
   ];
 
