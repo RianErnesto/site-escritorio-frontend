@@ -8,6 +8,7 @@ import { ListItemIcon } from "@mui/material";
 import { Typography } from "@mui/material";
 import { Icon } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { grey } from "@mui/material/colors";
 
 const navegacao = ["Home", "Sobre", "Destaques", "Projetos", "Contato"];
 const contato = [
@@ -81,7 +82,7 @@ function Navegacao() {
       {navegacao.map((item, i) => (
         <ListItem key={i} sx={{ paddingLeft: 0 }}>
           <ListItemIcon>
-            <ArrowForwardIosIcon color="primary" />
+            <ArrowForwardIosIcon color="primary" sx={{color: grey[50]}} />
           </ListItemIcon>
           <Link
             underline="hover"
@@ -107,7 +108,7 @@ function InformacoesContato() {
       {contato.map((item, i) => (
         <ListItem key={i} sx={{ paddingLeft: 0 }}>
           <ListItemIcon>
-            <Icon color="primary">{item.icon}</Icon>
+            <Icon sx={{color: grey[50]}}>{item.icon}</Icon>
           </ListItemIcon>
           <ListItemText primary={item.content} />
         </ListItem>
