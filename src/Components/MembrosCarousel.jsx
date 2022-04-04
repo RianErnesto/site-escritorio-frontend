@@ -115,17 +115,7 @@ function MembrosCarousel() {
 
   return (
     <Box pb="70px">
-      {/* <Button
-        sx={{ backgroundColor: "red" }}
-        onClick={() => {
-          const nextSlide = this.Carousel.state.currentSlide + 1;
-        }}
-      ></Button> */}
       <Carousel
-        ref={(el) => (
-            // this.Carousel = el
-            console.log(el)
-        )}
         transitionDuration={1000}
         additionalTransfrom={0}
         autoPlaySpeed={8000}
