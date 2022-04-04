@@ -22,7 +22,7 @@ const CustomRightArrow = ({ onClick, ...rest }) => {
         right: "10%",
         borderRadius: "100%",
         border: "none",
-        ":hover":{backgroundColor: 'rgb(220,220,220,0.1)'}
+        ":hover": { backgroundColor: 'rgb(220,220,220,0.1)' }
       }}
     >
       <img
@@ -49,7 +49,7 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
         left: "10%",
         borderRadius: "100%",
         border: "none",
-        ":hover":{backgroundColor: 'rgb(220,220,220,0.1)'}
+        ":hover": { backgroundColor: 'rgb(220,220,220,0.1)' }
       }}
     >
       <img
@@ -154,7 +154,9 @@ function HomeCarouselContent(props) {
         >
           {props.item.title}
         </Typography>
-        <Typography variant="h6" align="center" color="white" paragraph>
+        <Typography variant="h6" align="center" color="white" paragraph sx={{
+          fontFamily: 'Pluto Sans Cond ExLight'
+        }}>
           {props.item.description}
         </Typography>
         <Stack
@@ -163,7 +165,10 @@ function HomeCarouselContent(props) {
           spacing={2}
           justifyContent="center"
         >
-          <Button href={props.item.ref} variant="contained" sx={{backgroundColor: '#00B9E1', borderRadius: '20px 20px 20px 20px'}}>{props.item.button}</Button>
+          <Button href={props.item.ref} variant="contained" sx={{
+            backgroundColor: '#00B9E1',
+            borderRadius: '20px 20px 20px 20px'
+          }}>{props.item.button}</Button>
         </Stack>
       </Container>
     </Box>

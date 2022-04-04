@@ -18,6 +18,9 @@ function ContatosItems() {
         justifyContent: "space-around",
         width: { md: "50%", xs: '90%' },
         margin: "auto",
+        fontFamily: 'Pluto Sans',
+        fontWeight: "normal",
+        fontSize: "14px"
       }}
     >
       <Box>

@@ -91,10 +91,11 @@ function HomeNavBar(props) {
         <Breadcrumbs separator="|" aria-label="breadcrumb" color="white">
           {props.item.map((page) => (
             <Link
-              underline="hover"
+              underline="none"
               key="1"
               color="white"
               href={`#${page}`}
+              sx={{":hover": {borderBottom: "1px solid #00B9E1"}}}
             style={{ marginLeft: 20, marginRight: 20, filter: "drop-shadow(0 4px 10px black)" }}
             >
               {page}

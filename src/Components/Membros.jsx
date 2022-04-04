@@ -2,7 +2,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
-import { Typography } from "@mui/material";
+import Typography from "@mui/material/Typography";
 import MembrosCarousel from "./MembrosCarousel";
 
 function Membros() {
@@ -76,6 +76,7 @@ function Membros() {
               boxShadow: "2px 3px 0px #222",
             },
             borderRadius: "20px 20px 20px 20px",
+            fontFamily: 'Pluto Sans Cond'
           }}
         >
           Ver Todos

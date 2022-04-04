@@ -82,7 +82,7 @@ function GrupoHeader() {
               Grupos
             </Typography>
             <Box sx={{ border: '1px solid #00B9E1', mb: '20px', width: '35%', ml: { xs: 'auto', sm: 0 }, mr: { xs: 'auto', sm: 0 } }}></Box>
-            <Typography variant="h6" color="inherit" paragraph>
+            <Typography variant="h6" color="inherit" paragraph sx={{fontFamily: 'Pluto Sans', fontWeight: '100'}}>
               Equipes de atuação para a divisão de projetos
             </Typography>
           </Box>

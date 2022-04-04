@@ -29,6 +29,7 @@ function Sobre() {
           paragraph
           color="white"
           textAlign="left"
+          sx={{fontFamily: 'Pluto Sans Cond', fontWeight: '300'}}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel posuere sapien. Integer et pellentesque mi, nec scelerisque tortor. Cras ac lectus justo. Cras vel nisl vel velit scelerisque pretium.
         </Typography>
@@ -37,6 +38,7 @@ function Sobre() {
           paragraph
           color="white"
           textAlign="left"
+          sx={{fontFamily: 'Pluto Sans Cond', fontWeight: '300'}}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum erat arcu, at vestibulum lacus gravida at.
         </Typography>
@@ -45,6 +47,7 @@ function Sobre() {
           paragraph
           color="white"
           textAlign="left"
+          sx={{fontFamily: 'Pluto Sans Cond', fontWeight: '300'}}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia sapien porttitor nibh lacinia varius. Vestibulum ante ipsum primis in.
         </Typography>
@@ -54,13 +57,17 @@ function Sobre() {
           spacing={2}
           justifyContent="center"
         >
-          <Button variant="contained" sx={{backgroundColor: '#00B9E1', borderRadius: '20px 20px 20px 20px'}}>Saiba Mais...</Button>
+          <Button variant="contained" sx={{
+            backgroundColor: '#00B9E1',
+            borderRadius: '20px 20px 20px 20px',
+            fontFamily: 'Pluto Sans Cond'
+          }}>Saiba Mais...</Button>
         </Stack>
       </CardContent>
       <CardMedia
         component="img"
         sx={{
-          pt: {xs: '50px', md: 0},
+          pt: { xs: '50px', md: 0 },
           width: { md: '40%', xs: '100%' },
           height: '300px',
           marginTop: 'auto',

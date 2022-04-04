@@ -1,10 +1,10 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import Button from "@mui/material/Button";
-import { Box } from "@mui/material";
+import Box from "@mui/material/Box";
 import Avatar from "@mui/material/Avatar";
-import { CardContent } from "@mui/material";
-import { Typography } from "@mui/material";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
 import "../Styles/Carousel.css";
 import "react-multi-carousel/lib/styles.css";
 
@@ -153,14 +153,14 @@ function MembrosCarouselContent(props) {
         </Avatar>
       </Box>
       <CardContent>
-        <Typography mt="30px" mb="20px">
+        <Typography mt="30px" mb="20px" sx={{fontFamily: 'Pluto Sans Cond', fontWeight: '100', fontStyle: 'italic'}}>
           {props.member.description}
         </Typography>
-        <Typography variant="h5" component="h2" pb="20px">
+        <Typography variant="h5" component="h2" pb="20px" sx={{fontFamily: 'Pluto Sans Cond', fontWeight: 'bold'}}>
           {props.member.name}
         </Typography>
         {props.member.groups.map((group, i) => (
-          <Typography key={i} gutterBottom variant="h6" component="h4" textAlign="center">
+          <Typography key={i} gutterBottom variant="h6" component="h4" textAlign="center" sx={{fontFamily: 'Pluto Sans Cond', fontWeight: 'normal'}}>
             {group}
           </Typography>
         ))}

@@ -8,6 +8,8 @@ function Home() {
         style={{
           backgroundImage: "url(/src/Images/BackgroundImage.png)",
           backgroundRepeat: "no-repeat",
+          fontFamily: 'Pluto Sans Cond',
+          fontWeight: "300"
         }}
       >
         <HomeHeader />
