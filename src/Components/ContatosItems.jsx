@@ -10,25 +10,13 @@ import { Icon } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { grey } from "@mui/material/colors";
 
-const navegacao = ["Home", "Sobre", "Destaques", "Projetos", "Contato"];
-const contato = [
-  {
-    icon: "phone",
-    content: "(XX) XXXXX-XXXX",
-  },
-  {
-    icon: "mail",
-    content: "xxxx@xxx.xxx",
-  },
-];
-
 function ContatosItems() {
   return (
     <Box
       sx={{
         display: "flex",
         justifyContent: "space-around",
-        width: {md: "50%", xs: '90%'},
+        width: { md: "50%", xs: '90%' },
         margin: "auto",
       }}
     >
@@ -73,12 +61,14 @@ function ContatosItems() {
 }
 
 function Navegacao() {
+  const navegacao = ["Home", "Sobre", "Destaques", "Projetos", "Contato"];
+
   return (
     <List>
       {navegacao.map((item, i) => (
         <ListItem key={i} sx={{ paddingLeft: 0 }}>
           <ListItemIcon>
-            <ArrowForwardIosIcon color="primary" sx={{color: grey[50]}} />
+            <ArrowForwardIosIcon color="primary" sx={{ color: grey[50] }} />
           </ListItemIcon>
           <Link
             underline="hover"
@@ -98,12 +88,23 @@ function Navegacao() {
 }
 
 function InformacoesContato() {
+  const contato = [
+    {
+      icon: "phone",
+      content: "(XX) XXXXX-XXXX",
+    },
+    {
+      icon: "mail",
+      content: "xxxx@xxx.xxx",
+    },
+  ];
+
   return (
     <List>
       {contato.map((item, i) => (
         <ListItem key={i} sx={{ paddingLeft: 0 }}>
           <ListItemIcon>
-            <Icon sx={{color: grey[50]}}>{item.icon}</Icon>
+            <Icon sx={{ color: grey[50] }}>{item.icon}</Icon>
           </ListItemIcon>
           <ListItemText primary={item.content} />
         </ListItem>

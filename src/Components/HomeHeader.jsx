@@ -8,12 +8,14 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
-import HomeNavBar from "./HomeNavBar";
+import Stack from "@mui/material/Stack";
+import Breadcrumbs from "@mui/material/Breadcrumbs";
+import Link from "@mui/material/Link";
 
 const pages = ["Home", "Sobre", "Destaques", "Projetos", "Membros"];
 const logo = "/src/Images/Logo.png";
 
-const HomeHeader = () => {
+function HomeHeader() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -79,6 +81,28 @@ const HomeHeader = () => {
         </Toolbar>
       </Container>
     </AppBar>
+  );
+};
+
+function HomeNavBar(props) {
+  return (
+    <Box sx={{ display: { xs: "none", md: "flex" } }}>
+      <Stack spacing={2}>
+        <Breadcrumbs separator="|" aria-label="breadcrumb" color="white">
+          {props.item.map((page) => (
+            <Link
+              underline="hover"
+              key="1"
+              color="white"
+              href={`#${page}`}
+            style={{ marginLeft: 20, marginRight: 20, filter: "drop-shadow(0 4px 10px black)" }}
+            >
+              {page}
+            </Link>
+          ))}
+        </Breadcrumbs>
+      </Stack>
+    </Box>
   );
 };
 

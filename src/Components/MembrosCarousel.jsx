@@ -2,7 +2,9 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import Button from "@mui/material/Button";
 import { Box } from "@mui/material";
-import MembrosCarouselContent from "./MembrosCarouselContent";
+import Avatar from "@mui/material/Avatar";
+import { CardContent } from "@mui/material";
+import { Typography } from "@mui/material";
 import "../Styles/Carousel.css";
 import "react-multi-carousel/lib/styles.css";
 
@@ -61,58 +63,7 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
   );
 };
 
-function MembrosCarousel() {
-  var members = [
-    {
-      name: "Teste1",
-      photo: "src/Images/BackgroundImage.png",
-      emoji: "",
-      description:
-        "Grupo de engenharia voltado para o desenvolvimento de projetos do Cesupa",
-      group: "GroupTeste",
-    },
-    {
-      name: "Teste2",
-      photo: "src/Images/BackgroundImage.png",
-      emoji: "",
-      description:
-        "Grupo de engenharia voltado para o desenvolvimento de projetos do Cesupa",
-      group: "GroupTeste",
-    },
-    {
-      name: "Teste3",
-      photo: "src/Images/BackgroundImage.png",
-      emoji: "",
-      description:
-        "Grupo de engenharia voltado para o desenvolvimento de projetos do Cesupa",
-      group: "GroupTeste",
-    },
-    {
-      name: "Teste4",
-      photo: "src/Images/BackgroundImage.png",
-      emoji: "",
-      description:
-        "Grupo de engenharia voltado para o desenvolvimento de projetos do Cesupa",
-      group: "GroupTeste",
-    },
-    {
-      name: "Teste5",
-      photo: "src/Images/BackgroundImage.png",
-      emoji: "",
-      description:
-        "Grupo de engenharia voltado para o desenvolvimento de projetos do Cesupa",
-      group: "GroupTeste",
-    },
-    {
-      name: "Teste6",
-      photo: "src/Images/BackgroundImage.png",
-      emoji: "",
-      description:
-        "Grupo de engenharia voltado para o desenvolvimento de projetos do Cesupa",
-      group: "GroupTeste",
-    },
-  ];
-
+function MembrosCarousel(props) {
   return (
     <Box pb="70px">
       <Carousel
@@ -164,11 +115,59 @@ function MembrosCarousel() {
         customRightArrow={<CustomRightArrow />}
         customLeftArrow={<CustomLeftArrow />}
       >
-        {members.map((member, i) => (
+        {props.members.map((member, i) => (
           <MembrosCarouselContent key={i} member={member} />
         ))}
       </Carousel>
     </Box>
   );
 }
+
+function MembrosCarouselContent(props) {
+  return (
+    <Box
+      sx={{
+        backgroundColor: "#3D3D3D",
+        pt: "30px",
+        textAlign: "center",
+        marginLeft: "40px",
+        marginRight: "40px",
+        color: 'white'
+      }}
+    >
+      <Box
+        sx={{
+          position: "relative",
+          width: "10%",
+          margin: "auto",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Avatar
+          alt="avatar membro"
+          src="src/Images/BackgroundImage.png"
+          sx={{ margin: "auto", width: 100, height: 100 }}
+        ></Avatar>
+        <Avatar src="src/Images/BackgroundImage.png" sx={{ position: "absolute", bottom: -10, left: 30 }}>
+        </Avatar>
+      </Box>
+      <CardContent>
+        <Typography mt="30px" mb="20px">
+          {props.member.description}
+        </Typography>
+        <Typography variant="h5" component="h2" pb="20px">
+          {props.member.name}
+        </Typography>
+        {props.member.groups.map((group, i) => (
+          <Typography key={i} gutterBottom variant="h6" component="h4" textAlign="center">
+            {group}
+          </Typography>
+        ))}
+
+      </CardContent>
+    </Box>
+  );
+}
+
 export default MembrosCarousel;
