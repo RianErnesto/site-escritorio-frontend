@@ -5,10 +5,6 @@ import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
 
 const HomeNavBar = (props) => {
-  function handleClick(event) {
-    event.preventDefault();
-  }
-
   return (
     <Box sx={{ display: { xs: "none", md: "flex" } }}>
       <Stack spacing={2}>
@@ -19,7 +15,6 @@ const HomeNavBar = (props) => {
               key="1"
               color="white"
               href={`#${page}`}
-              onClick={handleClick}
             style={{ marginLeft: 20, marginRight: 20, filter: "drop-shadow(0 4px 10px black)" }}
             >
               {page}

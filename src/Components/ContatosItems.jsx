@@ -73,10 +73,6 @@ function ContatosItems() {
 }
 
 function Navegacao() {
-  function handleClick(event) {
-    event.preventDefault();
-  }
-
   return (
     <List>
       {navegacao.map((item, i) => (
@@ -89,7 +85,6 @@ function Navegacao() {
             key="1"
             color="white"
             href={`#${item}`}
-            onClick={handleClick}
             style={{
               filter: "drop-shadow(0 4px 10px black)",
             }}

@@ -18,13 +18,27 @@ ReactDOM.render(
 function App() {
   return (
     <div>
-      <Home />
-      <Grupo />
-      <Projetos />
-      <Sobre />
-      <Membros />
-      <Destaques />
-      <Contatos />
+      <div id='Home'>
+        <Home />
+      </div>
+      <div id='Grupo'>
+        <Grupo />
+      </div>
+      <div id='Projetos'>
+        <Projetos />
+      </div>
+      <div id='Sobre'>
+        <Sobre />
+      </div>
+      <div id='Membros'>
+        <Membros />
+      </div>
+      <div id='Destaques'>
+        <Destaques />
+      </div>
+      <div id='Contatos'>
+        <Contatos />
+      </div>
     </div>
   );
 }
