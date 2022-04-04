@@ -124,6 +124,14 @@ function MembrosCarousel(props) {
 }
 
 function MembrosCarouselContent(props) {
+  async function getEmoji(unicode) {
+    const url = await emoji.get(emoji.UnicodeToEmoji(unicode)).
+      then(emoji => {
+        return emoji.images[10].url;
+      })
+    return url;
+  }
+
   return (
     <Box
       sx={{
@@ -149,18 +157,17 @@ function MembrosCarouselContent(props) {
           src="src/Images/BackgroundImage.png"
           sx={{ margin: "auto", width: 100, height: 100 }}
         ></Avatar>
-        <Avatar src="src/Images/BackgroundImage.png" sx={{ position: "absolute", bottom: -10, left: 30 }}>
-        </Avatar>
+        <Avatar src="src/Images/BackgroundImage.png" sx={{ position: "absolute", bottom: -10, left: 30 }} />
       </Box>
       <CardContent>
-        <Typography mt="30px" mb="20px" sx={{fontFamily: 'Pluto Sans Cond', fontWeight: '100', fontStyle: 'italic'}}>
+        <Typography mt="30px" mb="20px" sx={{ fontFamily: 'Pluto Sans Cond', fontWeight: '100', fontStyle: 'italic' }}>
           {props.member.description}
         </Typography>
-        <Typography variant="h5" component="h2" pb="20px" sx={{fontFamily: 'Pluto Sans Cond', fontWeight: 'bold'}}>
+        <Typography variant="h5" component="h2" pb="20px" sx={{ fontFamily: 'Pluto Sans Cond', fontWeight: 'bold' }}>
           {props.member.name}
         </Typography>
         {props.member.groups.map((group, i) => (
-          <Typography key={i} gutterBottom variant="h6" component="h4" textAlign="center" sx={{fontFamily: 'Pluto Sans Cond', fontWeight: 'normal'}}>
+          <Typography key={i} gutterBottom variant="h6" component="h4" textAlign="center" sx={{ fontFamily: 'Pluto Sans Cond', fontWeight: 'normal' }}>
             {group}
           </Typography>
         ))}
