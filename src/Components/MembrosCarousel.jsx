@@ -171,4 +171,6 @@ function MembrosCarousel() {
     </Box>
   );
 }
+
 export default MembrosCarousel;
+
