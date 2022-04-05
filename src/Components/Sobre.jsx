@@ -7,7 +7,16 @@ import Button from '@mui/material/Button';
 import CardContent from '@mui/material/CardContent';
 
 
-const imagesAboutUs = ['src/BackgroundImage.png'];
+const moreImagesAboutUs = [
+  'src/BackgroundImage.png',
+  'src/BackgroundImage.png',
+  'src/BackgroundImage.png'
+];
+
+const mainImagesAboutUs = [
+  'src/BackgroundImage.png'
+]
+
 const moreParagraphs = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia sapien porttitor nibh lacinia varius. Vestibulum ante ipsum primis in.",
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id ipsum vitae ipsum vulputate interdum. Quisque hendrerit euismod arcu, non lobortis urna placerat rhoncus. Mauris.",
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut blandit varius ex nec cursus. Morbi sed justo ac nulla iaculis blandit. Ut egestas eu massa non congue. Quisque nulla ipsum, venenatis eget mollis ut, lacinia at est. Quisque.",
@@ -21,6 +30,7 @@ let mainParagraphs = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 
 function Sobre() {
   const [paragraphs, setParagraphs] = React.useState(mainParagraphs);
+  const [images, setImages] = React.useState(mainImagesAboutUs);
 
   return (
 
@@ -75,12 +85,11 @@ function SaibaMaisButton(props) {
     if (saibaMais == "Saiba Mais...") {
       props.setParagraphs(props.paragraphs.concat(moreParagraphs))
       setSaibaMais("Ocultar");
+      return;
     }
-    else {
       props.setParagraphs(mainParagraphs);
       console.log(props.paragraphs);
       setSaibaMais("Saiba Mais...");
-    }
   }
 
   return (
