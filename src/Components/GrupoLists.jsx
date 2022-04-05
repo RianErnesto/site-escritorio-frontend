@@ -47,6 +47,7 @@ function GrupoLists(props) {
               paragraph
               color="white"
               textAlign="center"
+              sx={{ marginTop: '20px', fontFamily: 'Pluto Sans', fontWeight: '100' }}
             >
               {props.item.description}
             </Typography>
@@ -67,10 +68,11 @@ function GrupoLists(props) {
                     color: "white",
                     border: "1px solid black",
                     boxShadow: "2px 3px 0px #222",
+                    fontFamily: 'Pluto Sans Cond'
                   },
                 }}
               >
-                Leia Mais
+                Ler Mais ...
               </Button>
             </Stack>
           </CardContent>

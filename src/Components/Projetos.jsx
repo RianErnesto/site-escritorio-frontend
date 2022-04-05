@@ -45,7 +45,7 @@ function Projetos() {
           gutterBottom
           component="div"
           textAlign="center"
-          sx={{ width: { md:"40%", xs: '90%' }, paddingTop: {md: '0', xs: '20px'}}}
+          sx={{ width: { md:"40%", xs: '90%' }, paddingTop: {md: '0', xs: '20px'}, fontFamily: 'Pluto Sans Cond', fontWeight: '100'}}
         >
           Pesquisas, protótipos e desenvolvimento de projetos voltados as áreas
           das engenharias
