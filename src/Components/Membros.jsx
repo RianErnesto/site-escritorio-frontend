@@ -9,6 +9,14 @@ function Membros() {
 
   var members = [
     {
+      name: "Enzo Victor",
+      photo: "src/Images/BackgroundImage.png",
+      emojiUnicode: "1F602",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dictum.",
+      groups: ["Programação", "Eletrônica", 'Robótica'],
+    },
+    {
       name: "Rian Ernesto",
       photo: "src/Images/BackgroundImage.png",
       emojiUnicode: "1F602",
