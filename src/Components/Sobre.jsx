@@ -34,8 +34,8 @@ function Sobre() {
 
   return (
 
-    <Box display="flex" sx={{ justifyContent: { md: 'space-around', xs: 'center' }, pt: '70px', pb: '50px', width: { md: '80%', xs: '100%' }, margin: 'auto', flexDirection: { xs: 'column', md: 'row' } }}>
-      <CardContent sx={{ width: { md: '30%', xs: '80%' }, margin: { xs: 'auto', md: 0 } }}>
+    <Box display="flex" sx={{ justifyContent: { md: 'space-around', xs: 'center' }, pt: '70px', pb: '50px', width: { md: '80%', xs: '100%' }, margin: 'auto', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center' }}>
+      <CardContent sx={{ width: { md: '30%', xs: '80%' }, margin: { xs: 'auto', md: 0 }}}>
         <Typography
           component="h2"
           variant="h5"
@@ -48,18 +48,7 @@ function Sobre() {
         <Box width='100%'>
           <Box sx={{ border: '1px solid #00B9E1', mb: '20px', mt: '10px', width: { md: '20%', xs: '10%' }, mr: { md: '20px', xs: 'auto' }, ml: { md: '20px', xs: 'auto' } }}></Box>
         </Box>
-        {paragraphs.map((text, i) => (
-          <Typography
-            key={i}
-            variant="subtitle2"
-            paragraph
-            color="white"
-            textAlign="left"
-            sx={{ fontFamily: 'Pluto Sans Cond', fontWeight: '300' }}
-          >
-            {text}
-          </Typography>
-        ))}
+        <SobreParagraphs paragraphs={paragraphs} />
         <SaibaMaisButton items={{ paragraphs: paragraphs, setParagraphs: setParagraphs, images: images, setImages: setImages }} />
       </CardContent>
       <SobreImages images={images} />
@@ -124,8 +113,25 @@ function SobreImages(props) {
         />
       ))}
     </Box>
+  );
+}
 
-
+function SobreParagraphs(props) {
+  return (
+    <Box>
+      {props.paragraphs.map((text, i) => (
+        <Typography
+          key={i}
+          variant="subtitle2"
+          paragraph
+          color="white"
+          textAlign="left"
+          sx={{ fontFamily: 'Pluto Sans Cond', fontWeight: '300' }}
+        >
+          {text}
+        </Typography>
+      ))}
+    </Box>
   );
 }
 
