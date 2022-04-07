@@ -69,7 +69,7 @@ function HomeCarousel() {
       description:
         "Grupo de engenharia voltado para o desenvolvimento de projetos do Cesupa",
       button: "Saber Mais...",
-      ref: 'https://cesupa.br'
+      ref: 'http://cesupa.br'
     },
     {
       title: "Sobre nós",
@@ -77,6 +77,20 @@ function HomeCarousel() {
         "Nós somos o Escritório de Engenharia, fazemos projetos e criamos discussões relacionadas a área da tecnologia aliada a engenharia",
       button: "Veja Mais...",
       ref: '#Sobre'
+    },
+    {
+      title: "Nossos projetos",
+      description:
+        "Fazemos projetos e pesquisas voltados a muitas áreas da tecnologia e engenharias, com o intuito de sempre estar colaborando com a sociedade usando de tudo que estiver ao nosso alcance",
+      button: "Projetos",
+      ref: '#Projetos'
+    },
+    {
+      title: "Membros do Escritório",
+      description:
+        "Os membros do escritório de engenharia do Cesupa são altamente capacitados para resolver os problemas designados a eles.",
+      button: "Nossos membros",
+      ref: '#Membros'
     },
   ];
 

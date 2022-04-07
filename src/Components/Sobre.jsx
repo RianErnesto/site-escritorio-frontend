@@ -35,7 +35,7 @@ function Sobre() {
   return (
 
     <Box display="flex" sx={{ justifyContent: { md: 'space-around', xs: 'center' }, pt: '70px', pb: '50px', width: { md: '80%', xs: '100%' }, margin: 'auto', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center' }}>
-      <CardContent sx={{ width: { md: '30%', xs: '80%' }, margin: { xs: 'auto', md: 0 }}}>
+      <CardContent sx={{ width: { md: '30%', xs: '80%' }, margin: { xs: 'auto', md: 0 } }}>
         <Typography
           component="h2"
           variant="h5"
@@ -81,7 +81,7 @@ function SaibaMaisButton(props) {
       spacing={2}
       justifyContent="center"
     >
-      <Button variant="contained" onClick={() => saibaMaisClick()} sx={{
+      <Button href='#Sobre' variant="contained" onClick={() => saibaMaisClick()} sx={{
         backgroundColor: '#00B9E1',
         borderRadius: '20px 20px 20px 20px',
         fontFamily: 'Pluto Sans Cond'
