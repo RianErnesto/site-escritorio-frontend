@@ -1,6 +1,6 @@
 import React from "react";
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
 import Carousel from "react-multi-carousel";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
@@ -126,26 +126,17 @@ function MembrosCarousel(props) {
 }
 
 function MembrosCarouselContent(props) {
-  // async function getEmoji(unicode) {
-  //   const url = await emoji.get(emoji.UnicodeToEmoji(unicode)).
-  //     then(emoji => {
-  //       return emoji.images[10].url;
-  //     })
-  //   return url;
-  // }
-
   return (
     <Box
       sx={{
         backgroundColor: "#3D3D3D",
         pt: "30px",
         textAlign: "center",
-        marginLeft: '40px',
-        marginRight: '40px',
-        color: 'white',
+        marginLeft: "40px",
+        marginRight: "40px",
+        color: "white",
         // alignSelf: 'center'
-        height: '100%',
-        
+        height: "100%",
       }}
     >
       <Box
@@ -162,21 +153,40 @@ function MembrosCarouselContent(props) {
           src="src/Images/BackgroundImage.png"
           sx={{ margin: "auto", width: 100, height: 100 }}
         ></Avatar>
-        <Avatar src="src/Images/BackgroundImage.png" sx={{ position: "absolute", bottom: -10, left: 30 }} />
+        {/* <AvatarEmoji /> */}
       </Box>
       <CardContent>
-        <Typography mt="30px" mb="20px" sx={{ fontFamily: 'Pluto Sans Cond', fontWeight: '100', fontStyle: 'italic' }}>
+        <Typography
+          mt="30px"
+          mb="20px"
+          sx={{
+            fontFamily: "Pluto Sans Cond",
+            fontWeight: "100",
+            fontStyle: "italic",
+          }}
+        >
           {props.member.description}
         </Typography>
-        <Typography variant="h5" component="h2" pb="20px" sx={{ fontFamily: 'Pluto Sans Cond', fontWeight: 'bold' }}>
+        <Typography
+          variant="h5"
+          component="h2"
+          pb="20px"
+          sx={{ fontFamily: "Pluto Sans Cond", fontWeight: "bold" }}
+        >
           {props.member.name}
         </Typography>
         {props.member.groups.map((group, i) => (
-          <Typography key={i} gutterBottom variant="h6" component="h4" textAlign="center" sx={{ fontFamily: 'Pluto Sans Cond', fontWeight: 'normal' }}>
+          <Typography
+            key={i}
+            gutterBottom
+            variant="h6"
+            component="h4"
+            textAlign="center"
+            sx={{ fontFamily: "Pluto Sans Cond", fontWeight: "normal" }}
+          >
             {group}
           </Typography>
         ))}
-
       </CardContent>
     </Box>
   );
@@ -184,8 +194,8 @@ function MembrosCarouselContent(props) {
 
 function MembrosGrid(props) {
   return (
-    <Container sx={{width: '100%', margin: 'auto'}}>
-      <Grid container sx={{margin: 'auto', justifyContent: 'center'}}>
+    <Container sx={{ width: "100%", margin: "auto" }}>
+      <Grid container sx={{ margin: "auto", justifyContent: "center" }}>
         {props.members.map((member, i) => (
           <MembrosGridContent member={member} key={i} />
         ))}
@@ -196,13 +206,19 @@ function MembrosGrid(props) {
 
 function MembrosGridContent(props) {
   return (
-    <Grid item xs={12} sm={6} md={3} sx={{ margin: '40px',display: 'flex', alignItems: 'center' }}>
+    <Grid
+      item
+      xs={12}
+      sm={6}
+      md={3}
+      sx={{ margin: "40px", display: "flex", alignItems: "center" }}
+    >
       <Box
         sx={{
           backgroundColor: "#3D3D3D",
           pt: "30px",
           textAlign: "center",
-          color: 'white'
+          color: "white",
         }}
       >
         <Box
@@ -219,24 +235,55 @@ function MembrosGridContent(props) {
             src="src/Images/BackgroundImage.png"
             sx={{ margin: "auto", width: 100, height: 100 }}
           ></Avatar>
-          <Avatar src="src/Images/BackgroundImage.png" sx={{ position: "absolute", bottom: -10, left: 30 }} />
+          <Avatar
+            src="src/Images/BackgroundImage.png"
+            sx={{ position: "absolute", bottom: -10, left: 30 }}
+          />
         </Box>
         <CardContent>
-          <Typography mt="30px" mb="20px" sx={{ fontFamily: 'Pluto Sans Cond', fontWeight: '100', fontStyle: 'italic' }}>
+          <Typography
+            mt="30px"
+            mb="20px"
+            sx={{
+              fontFamily: "Pluto Sans Cond",
+              fontWeight: "100",
+              fontStyle: "italic",
+            }}
+          >
             {props.member.description}
           </Typography>
-          <Typography variant="h5" component="h2" pb="20px" sx={{ fontFamily: 'Pluto Sans Cond', fontWeight: 'bold' }}>
+          <Typography
+            variant="h5"
+            component="h2"
+            pb="20px"
+            sx={{ fontFamily: "Pluto Sans Cond", fontWeight: "bold" }}
+          >
             {props.member.name}
           </Typography>
           {props.member.groups.map((group, i) => (
-            <Typography key={i} gutterBottom variant="h6" component="h4" textAlign="center" sx={{ fontFamily: 'Pluto Sans Cond', fontWeight: 'normal' }}>
+            <Typography
+              key={i}
+              gutterBottom
+              variant="h6"
+              component="h4"
+              textAlign="center"
+              sx={{ fontFamily: "Pluto Sans Cond", fontWeight: "normal" }}
+            >
               {group}
             </Typography>
           ))}
-
         </CardContent>
       </Box>
     </Grid>
+  );
+}
+
+function AvatarEmoji() {
+  return (
+    <Avatar
+      src="src/Images/BackgroundImage.png"
+      sx={{ position: "absolute", bottom: -10, left: 30 }}
+    />
   );
 }
 
