@@ -5,6 +5,8 @@ import Box from "@mui/material/Box";
 import { Stack } from "@mui/material";
 import Button from "@mui/material/Button";
 
+const backgroundImage = `url(src/Images/ProjetosBackground.png)`;
+
 function Projetos() {
   return (
     <Paper
@@ -15,7 +17,7 @@ function Projetos() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
-        backgroundImage: `url(src/Images/BackgroundImage.png)`,
+        backgroundImage: `url(src/Images/ProjetosBackground.png)`,
         pt: "60px",
         pb: "60px",
       }}
@@ -24,7 +26,6 @@ function Projetos() {
       {
         <img
           style={{ display: "none" }}
-          src="src/Images/BackgroundImage.png"
           alt="Background Image"
         />
       }
