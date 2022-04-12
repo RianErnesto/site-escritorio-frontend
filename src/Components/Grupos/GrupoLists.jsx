@@ -7,12 +7,13 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
+import { Link } from 'react-router-dom';
 
 function GrupoLists(props) {
   return (
     <Grid item xs={12} md={6} sx={{ backgroundColor: "transparent" }}>
       <CardActionArea
-        component="a"
+        component="div"
         sx={{ ":hover": { backgroundColor: "transparent", cursor: "inherit" } }}
       >
         <Card
@@ -72,7 +73,9 @@ function GrupoLists(props) {
                   },
                 }}
               >
-                Ler Mais ...
+                <Link to={props.item.path} style={{textDecoration: 'none', color: 'inherit'}}>
+                  Ler Mais ...
+                </Link>
               </Button>
             </Stack>
           </CardContent>

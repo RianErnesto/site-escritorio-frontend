@@ -4,8 +4,8 @@ import Grupo from "../../Components/Grupos/Grupo";
 import Projetos from "../../Components/Projetos/Projetos";
 import Sobre from "../../Components/Sobre/Sobre";
 import Membros from "../../Components/Membros/Membros";
-import Destaques from "../../Components/Destaques/Destaques";
-import Contatos from '../../Components/Contatos/Contatos';
+import Destaques from "../../Components/Shared/Destaques";
+import Contatos from '../../Components/Shared/Contatos';
 
 function Main() {
     return (

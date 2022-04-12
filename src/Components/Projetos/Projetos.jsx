@@ -4,6 +4,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { Stack } from "@mui/material";
 import Button from "@mui/material/Button";
+import { Link } from 'react-router-dom';
 
 const backgroundImage = `url(src/Images/ProjetosBackground.png)`;
 
@@ -22,7 +23,6 @@ function Projetos() {
         pb: "60px",
       }}
     >
-      {/* Increase the priority of the hero background image */}
       {
         <img
           style={{ display: "none" }}
@@ -52,7 +52,7 @@ function Projetos() {
           das engenharias
         </Typography>
         <Stack spacing={2} pt={1} ml={{md: '20px', xs: '0'}}>
-          <Button variant="contained" sx={{backgroundColor: '#00B9E1', borderRadius: '20px 20px 20px 20px'}}>Ver Projetos</Button>
+          <Button variant="contained" sx={{backgroundColor: '#00B9E1', borderRadius: '20px 20px 20px 20px'}}><Link to="Projeto" style={{textDecoration: 'none', color: 'inherit'}}>Ver Projetos</Link></Button>
         </Stack>
       </Box>
     </Paper>
