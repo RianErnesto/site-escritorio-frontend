@@ -1,11 +1,11 @@
 import React from "react";
-import Home from "./Components/Home";
-import Grupo from "./Components/Grupo";
-import Projetos from "./Components/Projetos";
-import Sobre from "./Components/Sobre";
-import Membros from "./Components/Membros";
-import Destaques from "./Components/Destaques";
-import Contatos from './Components/Contatos';
+import Home from "./Components/Home/Home";
+import Grupo from "./Components/Grupos/Grupo";
+import Projetos from "./Components/Projetos/Projetos";
+import Sobre from "./Components/Sobre/Sobre";
+import Membros from "./Components/Membros/Membros";
+import Destaques from "./Components/Destaques/Destaques";
+import Contatos from './Components/Contatos/Contatos';
 import ReactDOM from "react-dom";
 
 ReactDOM.render(
