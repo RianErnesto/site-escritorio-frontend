@@ -71,7 +71,7 @@ function MembrosCarousel(props) {
       <Carousel
         transitionDuration={1000}
         additionalTransfrom={0}
-        autoPlaySpeed={8000}
+        autoPlaySpeed={4000}
         centerMode={false}
         className="carouselMembros"
         containerClass="container"
@@ -150,9 +150,13 @@ function MembrosCarouselContent(props) {
       >
         <Avatar
           alt="avatar membro"
-          src="src/Images/BackgroundImage.png"
+          src={props.member.photo}
           sx={{ margin: "auto", width: 100, height: 100 }}
         ></Avatar>
+        <Avatar
+            src={props.member.photo}
+            sx={{ position: "absolute", bottom: -10, left: 30 }}
+          />
         {/* <AvatarEmoji /> */}
       </Box>
       <CardContent>
@@ -219,6 +223,7 @@ function MembrosGridContent(props) {
           pt: "30px",
           textAlign: "center",
           color: "white",
+          width: '100%'
         }}
       >
         <Box
@@ -232,13 +237,13 @@ function MembrosGridContent(props) {
         >
           <Avatar
             alt="avatar membro"
-            src="src/Images/BackgroundImage.png"
+            src={props.member.photo}
             sx={{ margin: "auto", width: 100, height: 100 }}
           ></Avatar>
-          <Avatar
-            src="src/Images/BackgroundImage.png"
+          {<Avatar
+            src={props.member.photo}
             sx={{ position: "absolute", bottom: -10, left: 30 }}
-          />
+          />}
         </Box>
         <CardContent>
           <Typography
