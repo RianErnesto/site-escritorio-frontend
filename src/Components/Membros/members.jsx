@@ -45,7 +45,7 @@ var members = [
         name: "Gabriel Marcelino",
         photo: "src/Images/FotosMembros/Gabriel/Gabriel.png",
         emoji: "src/Images/Emojis/Penguin_emoji_icon.png",
-        description: "",
+        description: "Gestor de Projetos e Empreendedor",
         groups: ["Eletrônica"],
     },
     {
