@@ -4,29 +4,10 @@ import GrupoLists from "./GrupoLists";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import groups from "./gruposContent.jsx";
 
 
 function Grupo() {
-  const groups = [
-    {
-      title: "Programação",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus egestas aliquet. Nullam dignissim tincidunt nisl, sed eleifend magna elementum.",
-      url: "/src/Images/ProgramacaoIcon.png",
-    },
-    {
-      title: "Eletrônica",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac fringilla dui. Maecenas luctus fringilla magna, eu aliquet massa condimentum vel.",
-      url: "/src/Images/EletronicaIcon.png",
-    },
-    {
-      title: "Robótica",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices eros dictum sem dapibus, vel.",
-      url: "/src/Images/RoboticaIcon.png",
-    },
-  ];
 
   return (
     <div
