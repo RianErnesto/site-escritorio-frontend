@@ -18,7 +18,6 @@ function Projetos() {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundImage: `url(src/Images/ProjetosBackground.png)`,
-        backgroundSize: "cover",
         pt: "60px",
         pb: "60px",
       }}
