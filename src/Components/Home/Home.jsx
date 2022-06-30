@@ -7,9 +7,11 @@ function Home() {
         <div
         style={{
           backgroundImage: "url(/src/Images/BackgroundImage.png)",
+          backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           fontFamily: 'Pluto Sans Cond',
-          fontWeight: "300"
+          fontWeight: "300",
+          width: "100%",
         }}
       >
         <HomeHeader />
