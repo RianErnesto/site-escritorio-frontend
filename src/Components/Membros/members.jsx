@@ -36,8 +36,8 @@ var members = [
     },
     {
         name: "Marco Antônio",
-        photo: "",
-        emoji: "",
+        photo: "src/Images/FotosMembros/Marco/Marco.jpg",
+        emoji: "src/Images/Emojis/Upside-Down_Face_Emoji_Icon.png",
         description: "Desevolvedor de Sistemas Web e Mobile.",
         groups: ["Programação", "Eletrônica", "Robótica"],
     },
