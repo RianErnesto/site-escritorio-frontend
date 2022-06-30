@@ -4,57 +4,7 @@ import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { MembrosCarousel, MembrosGrid } from "./MembrosCarouselGrid";
-
-var members = [
-  {
-    name: "Rian Ernesto",
-    photo: "src/Images/BackgroundImage.png",
-    emojiUnicode: "1F602",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dictum.",
-    groups: ["Programação", "Eletrônica", 'Robótica'],
-  },
-  {
-    name: "Matheus Dourado",
-    photo: "src/Images/BackgroundImage.png",
-    emojiUnicode: "1F620",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nunc.",
-    groups: ["Eletrônica", "Robótica"]
-  },
-  {
-    name: "Marco Antônio",
-    photo: "src/Images/BackgroundImage.png",
-    emojiUnicode: "1F605",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta ex.",
-    groups: ["Programação", "Eletrônica", "Robótica"],
-  },
-  {
-    name: "Gabriel Marcelino",
-    photo: "src/Images/BackgroundImage.png",
-    emojiUnicode: "1F61E",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lobortis.",
-    groups: ["Eletrônica"],
-  },
-  {
-    name: "Arthur Bessa",
-    photo: "src/Images/BackgroundImage.png",
-    emojiUnicode: "1F638",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tortor tortor, malesuada.",
-    groups: ["Programação", "Robótica"],
-  },
-  {
-    name: "Renan Andrew",
-    photo: "src/Images/BackgroundImage.png",
-    emojiUnicode: "1F63C",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer.",
-    groups: ["Programação"],
-  },
-];
+import members from "./members.jsx";
 
 function Membros() {
   const [carousel, setCarousel] = React.useState(true);

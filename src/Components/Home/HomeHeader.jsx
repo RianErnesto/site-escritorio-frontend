@@ -11,8 +11,8 @@ import MenuItem from "@mui/material/MenuItem";
 import Stack from "@mui/material/Stack";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
+import pages from "./homePages.jsx";
 
-const pages = ["Home", "Sobre", "Destaques", "Projetos", "Membros"];
 const logo = "/src/Images/Logo.png";
 
 function HomeHeader() {

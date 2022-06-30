@@ -71,7 +71,8 @@ function MembrosCarousel(props) {
       <Carousel
         transitionDuration={1000}
         additionalTransfrom={0}
-        autoPlaySpeed={8000}
+        autoPlay={true}
+        autoPlaySpeed={5000}
         centerMode={false}
         className="carouselMembros"
         containerClass="container"
@@ -134,6 +135,7 @@ function MembrosCarouselContent(props) {
         textAlign: "center",
         marginLeft: "40px",
         marginRight: "40px",
+        // minWidth: "20%",
         color: "white",
         // alignSelf: 'center'
         height: "100%",
@@ -150,10 +152,10 @@ function MembrosCarouselContent(props) {
       >
         <Avatar
           alt="avatar membro"
-          src="src/Images/BackgroundImage.png"
+          src={!props.member.photo ? "src/Images/Letras/" + props.member.name[0] + ".png" : props.member.photo}
           sx={{ margin: "auto", width: 100, height: 100 }}
         ></Avatar>
-        {/* <AvatarEmoji /> */}
+        {props.member.emoji ? <AvatarEmoji member={props.member} /> : null}
       </Box>
       <CardContent>
         <Typography
@@ -195,7 +197,7 @@ function MembrosCarouselContent(props) {
 function MembrosGrid(props) {
   return (
     <Container sx={{ width: "100%", margin: "auto" }}>
-      <Grid container sx={{ margin: "auto", justifyContent: "center" }}>
+      <Grid container sx={{ margin: "auto", justifyContent: "center", width: "100%" }}>
         {props.members.map((member, i) => (
           <MembrosGridContent member={member} key={i} />
         ))}
@@ -211,7 +213,7 @@ function MembrosGridContent(props) {
       xs={12}
       sm={6}
       md={3}
-      sx={{ margin: "40px", display: "flex", alignItems: "center" }}
+      sx={{ margin: "40px", display: "flex", alignItems: "center"}}
     >
       <Box
         sx={{
@@ -219,6 +221,8 @@ function MembrosGridContent(props) {
           pt: "30px",
           textAlign: "center",
           color: "white",
+          width: "100%",
+          height: "90%",
         }}
       >
         <Box
@@ -232,13 +236,14 @@ function MembrosGridContent(props) {
         >
           <Avatar
             alt="avatar membro"
-            src="src/Images/BackgroundImage.png"
+            src={!props.member.photo ? "src/Images/Letras/" + props.member.name[0] + ".png" : props.member.photo}
             sx={{ margin: "auto", width: 100, height: 100 }}
           ></Avatar>
-          <Avatar
-            src="src/Images/BackgroundImage.png"
+          {props.member.emoji ? <Avatar
+            src={!props.member.emoji ? "src/Images/Emojis/DefaultEmoji.png" : props.member.emoji}
             sx={{ position: "absolute", bottom: -10, left: 30 }}
-          />
+          /> : null}
+          
         </Box>
         <CardContent>
           <Typography
@@ -278,10 +283,10 @@ function MembrosGridContent(props) {
   );
 }
 
-function AvatarEmoji() {
+function AvatarEmoji(props) {
   return (
     <Avatar
-      src="src/Images/BackgroundImage.png"
+      src={!props.member.emoji ? "src/Images/Emojis/DefaultEmoji.png" : props.member.emoji}
       sx={{ position: "absolute", bottom: -10, left: 30 }}
     />
   );

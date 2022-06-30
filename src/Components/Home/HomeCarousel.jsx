@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import '../../Styles/Carousel.css';
 import "react-multi-carousel/lib/styles.css";
+import items from "./carouselItems.jsx";
 
 const CustomRightArrow = ({ onClick, ...rest }) => {
   const {
@@ -63,41 +64,12 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
 };
 
 function HomeCarousel() {
-  var items = [
-    {
-      title: "Bem vindo ao Escritório de Engenharia",
-      description:
-        "Grupo de engenharia voltado para o desenvolvimento de projetos do Cesupa",
-      button: "Saber Mais...",
-      ref: 'http://cesupa.br'
-    },
-    {
-      title: "Sobre nós",
-      description:
-        "Nós somos o Escritório de Engenharia, fazemos projetos e criamos discussões relacionadas a área da tecnologia aliada a engenharia",
-      button: "Veja Mais...",
-      ref: '#Sobre'
-    },
-    {
-      title: "Nossos projetos",
-      description:
-        "Fazemos projetos e pesquisas voltados a muitas áreas da tecnologia e engenharias, com o intuito de sempre estar colaborando com a sociedade usando de tudo que estiver ao nosso alcance",
-      button: "Projetos",
-      ref: '#Projetos'
-    },
-    {
-      title: "Membros do Escritório",
-      description:
-        "Os membros do escritório de engenharia do Cesupa são altamente capacitados para resolver os problemas designados a eles.",
-      button: "Nossos membros",
-      ref: '#Membros'
-    },
-  ];
 
   return (
     <Carousel
       additionalTransfrom={0}
-      autoPlaySpeed={8000}
+      autoPlay={true}
+      autoPlaySpeed={5000}
       centerMode={false}
       containerClass="container"
       className="carousel-container"

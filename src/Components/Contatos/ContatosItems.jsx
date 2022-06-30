@@ -9,6 +9,8 @@ import { Typography } from "@mui/material";
 import { Icon } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { grey } from "@mui/material/colors";
+import pages from "../Home/homePages.jsx";
+import contato from "./informacoesContato.jsx";
 
 function ContatosItems() {
   return (
@@ -64,11 +66,9 @@ function ContatosItems() {
 }
 
 function Navegacao() {
-  const navegacao = ["Home", "Sobre", "Destaques", "Projetos", "Contato"];
-
   return (
     <List>
-      {navegacao.map((item, i) => (
+      {pages.map((item, i) => (
         <ListItem key={i} sx={{ paddingLeft: 0 }}>
           <ListItemIcon>
             <ArrowForwardIosIcon color="primary" sx={{ color: grey[50] }} />
@@ -91,17 +91,6 @@ function Navegacao() {
 }
 
 function InformacoesContato() {
-  const contato = [
-    {
-      icon: "phone",
-      content: "(XX) XXXXX-XXXX",
-    },
-    {
-      icon: "mail",
-      content: "xxxx@xxx.xxx",
-    },
-  ];
-
   return (
     <List>
       {contato.map((item, i) => (
