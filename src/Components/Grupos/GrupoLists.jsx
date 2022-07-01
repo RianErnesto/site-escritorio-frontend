@@ -30,7 +30,7 @@ function GrupoLists(props) {
               display: { xs: "block", sm: "block" },
               margin: { xs: "auto" },
             }}
-            image={props.item.url}
+            src={props.item.url}
             alt={props.item.title}
           />
           <CardContent sx={{ flex: 1 }}>

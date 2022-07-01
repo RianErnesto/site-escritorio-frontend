@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 
 function Destaques() {
 
-  const destaquesImages = ["src/Images/LogoEscritorio.png", "src/Images/LogoCesupa.png", "src/Images/LogoArgo.png"];
+  const destaquesImages = ["/Images/LogoEscritorio.png", "/Images/LogoCesupa.png", "/Images/LogoArgo.png"];
 
   return (
     <Box

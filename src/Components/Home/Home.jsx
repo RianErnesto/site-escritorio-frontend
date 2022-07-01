@@ -1,12 +1,13 @@
 import React from "react";
 import HomeHeader from "./HomeHeader";
 import HomeCarousel from "./HomeCarousel";
+import BackgroundImage from "/Images/BackgroundImage.png";
 
 function Home() {
     return(
         <div
         style={{
-          backgroundImage: "url(/src/Images/BackgroundImage.png)",
+          backgroundImage: `url(${BackgroundImage})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           fontFamily: 'Pluto Sans Cond',

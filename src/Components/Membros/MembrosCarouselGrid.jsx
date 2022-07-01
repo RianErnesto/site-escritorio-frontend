@@ -10,65 +10,65 @@ import Typography from "@mui/material/Typography";
 import "../../Styles/Carousel.css";
 import "react-multi-carousel/lib/styles.css";
 
-const CustomRightArrow = ({ onClick, ...rest }) => {
-  const {
-    onMove,
-    carouselState: { currentSlide, deviceType },
-  } = rest;
-  return (
-    <Button
-      onClick={() => onClick()}
-      sx={{
-        backgroundColor: "transparent",
-        position: "absolute",
-        right: "-10px",
-        borderRadius: "100%",
-        border: "none",
-        ":hover": { backgroundColor: "rgb(220,220,220,0.1)" },
-      }}
-    >
-      <img
-        className="arrowImage"
-        src="src/Images/RightArrow.png"
-        height="50px"
-        style={{ backgroundColor: "transparent" }}
-      />
-    </Button>
-  );
-};
+// const CustomRightArrow = ({ onClick, ...rest }) => {
+//   const {
+//     onMove,
+//     carouselState: { currentSlide, deviceType },
+//   } = rest;
+//   return (
+//     <Button
+//       onClick={() => onClick()}
+//       sx={{
+//         backgroundColor: "transparent",
+//         position: "absolute",
+//         right: "-10px",
+//         borderRadius: "100%",
+//         border: "none",
+//         ":hover": { backgroundColor: "rgb(220,220,220,0.1)" },
+//       }}
+//     >
+//       <img
+//         className="arrowImage"
+//         src="./src/Images/RightArrow.png"
+//         height="50px"
+//         style={{ backgroundColor: "transparent" }}
+//       />
+//     </Button>
+//   );
+// };
 
-const CustomLeftArrow = ({ onClick, ...rest }) => {
-  const {
-    onMove,
-    carouselState: { currentSlide, deviceType },
-  } = rest;
-  return (
-    <Button
-      onClick={() => onClick()}
-      sx={{
-        backgroundColor: "transparent",
-        position: "absolute",
-        left: "-10px",
-        zIndex: "10",
-        borderRadius: "100%",
-        border: "none",
-        ":hover": { backgroundColor: "rgb(220,220,220,0.1)" },
-      }}
-    >
-      <img
-        className="arrowImage"
-        src="src/Images/LeftArrow.png"
-        height="50px"
-        style={{ backgroundColor: "transparent" }}
-      />
-    </Button>
-  );
-};
+// const CustomLeftArrow = ({ onClick, ...rest }) => {
+//   const {
+//     onMove,
+//     carouselState: { currentSlide, deviceType },
+//   } = rest;
+//   return (
+//     <Button
+//       onClick={() => onClick()}
+//       sx={{
+//         backgroundColor: "transparent",
+//         position: "absolute",
+//         left: "-10px",
+//         zIndex: "10",
+//         borderRadius: "100%",
+//         border: "none",
+//         ":hover": { backgroundColor: "rgb(220,220,220,0.1)" },
+//       }}
+//     >
+//       <img
+//         className="arrowImage"
+//         src="./src/Images/LeftArrow.png"
+//         height="50px"
+//         style={{ backgroundColor: "transparent" }}
+//       />
+//     </Button>
+//   );
+// };
 
 function MembrosCarousel(props) {
   return (
     <Box pb="70px">
-      <Carousel
+      {/* <Carousel
         transitionDuration={1000}
         additionalTransfrom={0}
         autoPlay={true}
@@ -121,7 +121,7 @@ function MembrosCarousel(props) {
         {props.members.map((member, i) => (
           <MembrosCarouselContent key={i} member={member} />
         ))}
-      </Carousel>
+      </Carousel> */}
     </Box>
   );
 }
@@ -152,7 +152,7 @@ function MembrosCarouselContent(props) {
       >
         <Avatar
           alt="avatar membro"
-          src={!props.member.photo ? "src/Images/Letras/" + props.member.name[0] + ".png" : props.member.photo}
+          src={!props.member.photo ? "/Images/Letras/" + props.member.name[0] + ".png" : props.member.photo}
           sx={{ margin: "auto", width: 100, height: 100 }}
         ></Avatar>
         {props.member.emoji ? <AvatarEmoji member={props.member} /> : null}
@@ -236,11 +236,11 @@ function MembrosGridContent(props) {
         >
           <Avatar
             alt="avatar membro"
-            src={!props.member.photo ? "src/Images/Letras/" + props.member.name[0] + ".png" : props.member.photo}
+            src={!props.member.photo ? "/Images/Letras/" + props.member.name[0] + ".png" : props.member.photo}
             sx={{ margin: "auto", width: 100, height: 100 }}
           ></Avatar>
           {props.member.emoji ? <Avatar
-            src={!props.member.emoji ? "src/Images/Emojis/DefaultEmoji.png" : props.member.emoji}
+            src={props.member.emoji}
             sx={{ position: "absolute", bottom: -10, left: 30 }}
           /> : null}
           
@@ -286,7 +286,7 @@ function MembrosGridContent(props) {
 function AvatarEmoji(props) {
   return (
     <Avatar
-      src={!props.member.emoji ? "src/Images/Emojis/DefaultEmoji.png" : props.member.emoji}
+      src={props.member.emoji}
       sx={{ position: "absolute", bottom: -10, left: 30 }}
     />
   );

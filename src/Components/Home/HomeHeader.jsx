@@ -13,7 +13,7 @@ import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
 import pages from "./homePages.jsx";
 
-const logo = "/src/Images/Logo.png";
+const logo = "/Images/Logo.png";
 
 function HomeHeader() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

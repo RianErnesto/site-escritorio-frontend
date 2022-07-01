@@ -87,7 +87,7 @@ function SobreImages(props) {
             width: '100%',
             height: '300px'
           }}
-          image={image}
+          src={image}
           alt="Background image"
         />
       ))}

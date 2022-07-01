@@ -2,7 +2,7 @@ const moreImagesAboutUs = [
 ];
 
 const mainImagesAboutUs = [
-  'src/Images/Escritorio_Engenharia.png'
+  '/Images/Escritorio_Engenharia.png'
 ]
 
 const moreParagraphs = ["Trabalhamos nas áreas de Automação e Robótica, Eletrônica Aplicada, Forense Computacional, Computação Aplicada e Manutenção.",

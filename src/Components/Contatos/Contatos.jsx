@@ -19,7 +19,7 @@ function ContatosIcons() {
     return (
       <Box sx={{ width: {md: "30%", xs: '100%'}, paddingLeft: {md: '50px', xs: 0}, paddingTop: {md: 0, xs: '50px'}}}>
         <Box sx={{ display: "flex", justifyContent: "center"}}>
-          <img src="src/Images/Logo.png" height={120} />
+          <img src="/Images/Logo.png" height={120} />
         </Box>
         <Box
           sx={{

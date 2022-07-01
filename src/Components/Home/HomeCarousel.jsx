@@ -28,7 +28,7 @@ const CustomRightArrow = ({ onClick, ...rest }) => {
     >
       <img
         className="arrowImage"
-        src="src/Images/RightArrow.png"
+        src="./src/Images/RightArrow.png"
         height="50px"
         style={{ backgroundColor: "transparent" }}
       />
@@ -55,7 +55,7 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
     >
       <img
         className="arrowImage"
-        src="src/Images/LeftArrow.png"
+        src="./src/Images/LeftArrow.png"
         height="50px"
         style={{ backgroundColor: "transparent" }}
       />
@@ -66,57 +66,60 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
 function HomeCarousel() {
 
   return (
-    <Carousel
-      additionalTransfrom={0}
-      autoPlay={true}
-      autoPlaySpeed={5000}
-      centerMode={false}
-      containerClass="container"
-      className="carousel-container"
-      dotListClass=""
-      draggable
-      focusOnSelect={false}
-      infinite
-      itemClass=""
-      keyBoardControl
-      minimumTouchDrag={80}
-      removeArrowOnDeviceType={["mobile", "tablet"]}
-      renderButtonGroupOutside={false}
-      renderDotsOutside={false}
-      responsive={{
-        desktop: {
-          breakpoint: {
-            max: 3000,
-            min: 1024,
-          },
-          items: 1,
-        },
-        mobile: {
-          breakpoint: {
-            max: 464,
-            min: 0,
-          },
-          items: 1,
-        },
-        tablet: {
-          breakpoint: {
-            max: 1024,
-            min: 464,
-          },
-          items: 1,
-        },
-      }}
-      showDots={false}
-      sliderClass=""
-      slidesToSlide={1}
-      swipeable={true}
-      customRightArrow={<CustomRightArrow />}
-      customLeftArrow={<CustomLeftArrow />}
-    >
-      {items.map((item, i) => (
-        <HomeCarouselContent key={i} item={item} />
-      ))}
-    </Carousel>
+    <Box>
+      Teste
+    </Box>
+    // <Carousel
+    //   additionalTransfrom={0}
+    //   autoPlay={true}
+    //   autoPlaySpeed={5000}
+    //   centerMode={false}
+    //   containerClass="container"
+    //   className="carousel-container"
+    //   dotListClass=""
+    //   draggable
+    //   focusOnSelect={false}
+    //   infinite
+    //   itemClass=""
+    //   keyBoardControl
+    //   minimumTouchDrag={80}
+    //   removeArrowOnDeviceType={["mobile", "tablet"]}
+    //   renderButtonGroupOutside={false}
+    //   renderDotsOutside={false}
+    //   responsive={{
+    //     desktop: {
+    //       breakpoint: {
+    //         max: 3000,
+    //         min: 1024,
+    //       },
+    //       items: 1,
+    //     },
+    //     mobile: {
+    //       breakpoint: {
+    //         max: 464,
+    //         min: 0,
+    //       },
+    //       items: 1,
+    //     },
+    //     tablet: {
+    //       breakpoint: {
+    //         max: 1024,
+    //         min: 464,
+    //       },
+    //       items: 1,
+    //     },
+    //   }}
+    //   showDots={false}
+    //   sliderClass=""
+    //   slidesToSlide={1}
+    //   swipeable={true}
+    //   customRightArrow={<CustomRightArrow />}
+    //   customLeftArrow={<CustomLeftArrow />}
+    // >
+    //   {items.map((item, i) => (
+    //     <HomeCarouselContent key={i} item={item} />
+    //   ))}
+    // </Carousel>
   );
 }
 

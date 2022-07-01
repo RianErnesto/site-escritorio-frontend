@@ -4,8 +4,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { Stack } from "@mui/material";
 import Button from "@mui/material/Button";
-
-const backgroundImage = `url(src/Images/ProjetosBackground.png)`;
+import ProjetosBackground from "/Images/ProjetosBackground.png";
 
 function Projetos() {
   return (
@@ -17,7 +16,7 @@ function Projetos() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
-        backgroundImage: `url(src/Images/ProjetosBackground.png)`,
+        backgroundImage: `url(${ProjetosBackground})`,
         pt: "60px",
         pb: "60px",
       }}
