@@ -68,7 +68,8 @@ function HomeHeader() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Link href={`#${page}`} sx={{textDecoration: 'none', color: "black"}}><Typography textAlign="center">{page}</Typography></Link>
+                  
                 </MenuItem>
               ))}
             </Menu>

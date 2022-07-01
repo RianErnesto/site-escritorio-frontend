@@ -226,10 +226,10 @@ function MembrosCarouselContent(props) {
         marginLeft: "40px",
         marginRight: "40px",
         // minWidth: "20%",
-        width: "25vw",
+        width: {md: "25vw", sm: "35vw", xs: "70vw"},
         color: "white",
         // alignSelf: 'center'
-        height: "100%",
+        height: {md: "100%"},
       }}
     >
       <Box

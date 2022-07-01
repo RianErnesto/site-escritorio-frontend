@@ -3,7 +3,7 @@ var members = [
         name: "Alessandra Natasha",
         photo: "/Images/FotosMembros/Alessandra/Alessandra.jpg",
         emoji: "/Images/Emojis/Hugging_Face_Emoji.png",
-        description: "Professora e Coordenadora dos cursos de Engenharia de Computação e Ciência de Computação.",
+        description: "Coordenadora dos cursos de Engenharia e Ciência de Computação.",
         groups: ["Programação", "Eletrônica", 'Robótica'],
     },
     {

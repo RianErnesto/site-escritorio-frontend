@@ -221,7 +221,8 @@ function HomeCarouselContent(props) {
         pt: 8,
         pb: 6,
         backgroundColor: "transparent",
-        width: "80vw",
+        width: { xs: "90vw", md: "80vw" },
+        fontSize: {xs: "10px"},
         minHeight: "500px",
       }}
     >
@@ -232,12 +233,15 @@ function HomeCarouselContent(props) {
           align="center"
           color="white"
           gutterBottom
+          // fontSize={{xs: "3em"}}
         >
           {props.item.title}
         </Typography>
         <Typography variant="h6" align="center" color="white" paragraph sx={{
           fontFamily: 'Pluto Sans Cond ExLight'
-        }}>
+        }}
+        // fontSize={{xs: "2em"}}
+        >
           {props.item.description}
         </Typography>
         <Stack
