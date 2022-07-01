@@ -1,14 +1,18 @@
-import React from "react";
+import React, {useState} from "react";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Carousel from "react-multi-carousel";
+// import Carousel from "react-multi-carousel";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Avatar from "@mui/material/Avatar";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import "../../Styles/Carousel.css";
-import "react-multi-carousel/lib/styles.css";
+// import "react-multi-carousel/lib/styles.css";
+
+import Carousel from "react-simply-carousel"
+import ReactSimplyCarousel from "react-simply-carousel";
+import carouselStyles from "../../../public/Styles/carouselStyles.js";
 
 // const CustomRightArrow = ({ onClick, ...rest }) => {
 //   const {
@@ -65,9 +69,95 @@ import "react-multi-carousel/lib/styles.css";
 //   );
 // };
 
+
+const CustomRightArrow = () => {
+  return (
+    <img
+      className="arrowImage"
+      src="/Images/RightArrow.png"
+      height="50px"
+      style={{ backgroundColor: "transparent" }}
+    />
+  );
+};
+
+const CustomLeftArrow = () => {
+  return (
+    <img
+      className="arrowImage"
+      src="/Images/LeftArrow.png"
+      height="50px"
+      style={{ backgroundColor: "transparent" }}
+    />
+  );
+};
+
 function MembrosCarousel(props) {
+  const [hoverRight, setHoverRight] = useState(false);
+  const [hoverLeft, setHoverLeft] = useState(false);
+  const [activeSlide, setActiveSlide] = useState(0);
+
   return (
     <Box pb="70px">
+      <ReactSimplyCarousel
+      containerProps={{
+        style: {
+          display: "flex",
+          backgroundColor: "transparent",
+          width: "100%",
+          margin: "auto",
+          justifyContent: "space-around",
+          userSelect: "text"
+        }
+      }
+      }
+      activeSlideIndex={activeSlide}
+      onRequestChange={setActiveSlide}
+      forwardBtnProps={{
+        show: false,
+        children: <CustomRightArrow />,
+        onClick: () => handleForward,
+        onMouseEnter: () => setHoverRight(true),
+        onMouseLeave: () => setHoverRight(false),
+        style: {
+          ...carouselStyles.normal,
+          ...(hoverRight ? carouselStyles.hover : null)
+        }
+      }}
+      backwardBtnProps={{
+        show: false,
+        children: <CustomLeftArrow />,
+        onMouseEnter: () => setHoverLeft(true),
+        onMouseLeave: () => setHoverLeft(false),
+        style: {
+          ...carouselStyles.normal,
+          ...(hoverLeft ? carouselStyles.hover : null)
+        }
+      }}
+      dotsNav={{
+        show: false
+      }}
+      itemsToShow={3}
+      // itemsToScroll={3}
+      responsiveProps={[
+        {
+          maxWidth: 768,
+          backwardBtnProps: {show: false},
+          forwardBtnProps: {show: false},
+        }
+      ]}
+      speed={3000}
+      autoplay={true}
+      infinite={true} 
+      updateOnItemClick={false}
+    >
+      {props.members.map((member, i) => (
+          <MembrosCarouselContent key={i} member={member} />
+        ))}
+    </ReactSimplyCarousel>
+
+
+
       {/* <Carousel
         transitionDuration={1000}
         additionalTransfrom={0}
@@ -136,6 +226,7 @@ function MembrosCarouselContent(props) {
         marginLeft: "40px",
         marginRight: "40px",
         // minWidth: "20%",
+        width: "25vw",
         color: "white",
         // alignSelf: 'center'
         height: "100%",
