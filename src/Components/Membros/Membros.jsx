@@ -3,7 +3,8 @@ import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { MembrosCarousel, MembrosGrid } from "./MembrosCarouselGrid";
+import { MembrosGrid } from "./MembrosCarouselGrid";
+import MembrosCarousel from "./Carousel";
 import members from "./members.jsx";
 
 function Membros() {
@@ -33,6 +34,7 @@ function MembrosHeader() {
         display: 'flex-column',
         textAlign: { xs: 'center', md: 'left' }
       }}
+      className="header-title"
     >
       <Typography component="h1" variant="h3" color="inherit" gutterBottom>
         Membros
@@ -49,9 +51,13 @@ function VerTodosButton(props) {
     props.items.setCarousel(!props.items.carousel);
 
     if (verTodos == "Ver Todos") {
+      let whereToScroll = document.querySelector('.header-title').offsetTop;
+      window.scrollTo({ top: whereToScroll, behavior: 'smooth' });
       setVerTodos("Ocultar");
     }
     else {
+      let whereToScroll = document.querySelector('.header-title').offsetTop;
+      window.scrollTo({ top: whereToScroll, behavior: 'smooth' });
       setVerTodos("Ver Todos");
     }
   }
@@ -59,7 +65,6 @@ function VerTodosButton(props) {
   return (
     <Stack sx={{ pt: 4, pb: 12 }} direction="row" spacing={2} justifyContent="center">
       <Button
-        href="#Membros"
         onClick={VerTodosButton}
         variant="contained"
         sx={{

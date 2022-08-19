@@ -13,14 +13,15 @@ function Sobre() {
 
   return (
 
-    <Box display="flex" sx={{ justifyContent: { md: 'space-around', xs: 'center' }, pt: '70px', pb: '50px', width: { md: '80%', xs: '100%' }, margin: 'auto', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center' }}>
-      <CardContent sx={{ width: { md: '30%', xs: '80%' }, margin: { xs: 'auto', md: 0 } }}>
+    <Box display="flex" sx={{ justifyContent: { md: 'space-around', xs: 'center' }, pt: '70px', pb: '50px', width: { md: '80%', xs: '100%' }, margin: 'auto', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center'}}>
+      <CardContent sx={{ width: { md: '30%', xs: '80%' }, margin: { xs: 'auto', md: 0 }}}>
         <Typography
           component="h2"
           variant="h5"
           color="white"
           textAlign={{ md: "left", xs: 'center' }}
           sx={{ ml: { md: '20px', xs: 0 } }}
+          className="sobre-title"
         >
           Sobre Nós
         </Typography>
@@ -45,12 +46,16 @@ function SaibaMaisButton(props) {
       setSaibaMais("Ocultar");
     }
     else {
-
       props.items.setParagraphs(mainParagraphs);
       props.items.setImages(mainImagesAboutUs);
-      console.log(props.items.paragraphs);
       setSaibaMais("Saiba Mais...");
+      scrollTopSobre();
     }
+  }
+
+  function scrollTopSobre() {
+    let whereToScroll = document.querySelector('.sobre-title').offsetTop;
+    window.scrollTo({ top: whereToScroll - 50, behavior: 'smooth' });
   }
 
   return (
@@ -60,7 +65,7 @@ function SaibaMaisButton(props) {
       spacing={2}
       justifyContent="center"
     >
-      <Button href='#Sobre' variant="contained" onClick={() => saibaMaisClick()} sx={{
+      <Button variant="contained" onClick={() => saibaMaisClick()} sx={{
         backgroundColor: '#00B9E1',
         borderRadius: '20px 20px 20px 20px',
         fontFamily: 'Pluto Sans Cond'
@@ -75,7 +80,7 @@ function SobreImages(props) {
       width: { md: "40%", xs: '100%' },
       marginTop: 'auto',
       marginBottom: 'auto',
-      display: 'flex-column'
+      display: 'flex-column',
     }}>
       {props.images.map((image, i) => (
         <CardMedia

@@ -14,6 +14,7 @@ import Link from "@mui/material/Link";
 import pages from "./homePages.jsx";
 
 const logo = "/Images/Logo.png";
+const logoCesupa = "/Images/LogoCesupaWhite.png";
 
 function HomeHeader() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -35,6 +36,7 @@ function HomeHeader() {
         <Toolbar disableGutters sx={{ justifyContent: "space-around"}}>
           <IconButton sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
             <img src={logo} height={120}></img>
+            <img src={logoCesupa} height={140}></img>
           </IconButton>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" }}}>
             <IconButton
@@ -78,6 +80,7 @@ function HomeHeader() {
             sx={{ flexGrow: 100, display: { xs: "flex", md: "none" } }}
           >
             <img src={logo} height={120}></img>
+            <img src={logoCesupa} height={140}></img>
           </IconButton>
           <HomeNavBar item={pages} />
         </Toolbar>
